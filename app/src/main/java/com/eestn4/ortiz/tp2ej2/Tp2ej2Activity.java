@@ -23,12 +23,12 @@ public class Tp2ej2Activity extends AppCompatActivity {
     public void suma(View view){
         EditText numero1 = (EditText)findViewById(R.id.EditNum1);
         EditText numero2 = (EditText)findViewById(R.id.EditNum2);
-        int resultado;
-        int num1 = Integer.parseInt(numero1.getText().toString());
-        int num2 = Integer.parseInt(numero2.getText().toString());
-        resultado = num1+num2;
-        Toast toast1= Toast.makeText(getApplicationContext(),"el resultado de la suma es:"+resultado, Toast.LENGTH_SHORT);;
-        toast1.show();
+            int resultado;
+            int num1 = Integer.parseInt(numero1.getText().toString());
+            int num2 = Integer.parseInt(numero2.getText().toString());
+            resultado = num1 + num2;
+            Toast toast1 = Toast.makeText(getApplicationContext(), "el resultado de la suma es:" + resultado, Toast.LENGTH_SHORT);
+            toast1.show();
     }
     public void resta(View view){
         EditText numero1 = (EditText)findViewById(R.id.EditNum1);
@@ -37,7 +37,7 @@ public class Tp2ej2Activity extends AppCompatActivity {
         int num1 = Integer.parseInt(numero1.getText().toString());
         int num2 = Integer.parseInt(numero2.getText().toString());
         resultado = num1-num2;
-        Toast toast1= Toast.makeText(getApplicationContext(),"el resultado de la resta es:"+resultado, Toast.LENGTH_SHORT);;
+        Toast toast1= Toast.makeText(getApplicationContext(),"el resultado de la resta es:"+resultado, Toast.LENGTH_SHORT);
         toast1.show();
     }
 
@@ -47,9 +47,14 @@ public class Tp2ej2Activity extends AppCompatActivity {
         int resultado;
         int num1 = Integer.parseInt(numero1.getText().toString());
         int num2 = Integer.parseInt(numero2.getText().toString());
+        if (num2 == 0){
+            Toast toast2= Toast.makeText(getApplicationContext(),"No se puede dividir por 0", Toast.LENGTH_SHORT);
+            toast2.show();
+        }else{
         resultado = num1/num2;
-        Toast toast1= Toast.makeText(getApplicationContext(),"el resultado de la division es:"+resultado, Toast.LENGTH_SHORT);;
+        Toast toast1= Toast.makeText(getApplicationContext(),"el resultado de la division es:"+resultado, Toast.LENGTH_SHORT);
         toast1.show();
+        }
     }
 
     public void multi(View view){
@@ -59,7 +64,7 @@ public class Tp2ej2Activity extends AppCompatActivity {
         int num1 = Integer.parseInt(numero1.getText().toString());
         int num2 = Integer.parseInt(numero2.getText().toString());
         resultado = num1*num2;
-        Toast toast1= Toast.makeText(getApplicationContext(),"el resultado de la multiplicacion es:"+resultado, Toast.LENGTH_SHORT);;
+        Toast toast1= Toast.makeText(getApplicationContext(),"el resultado de la multiplicacion es:"+resultado, Toast.LENGTH_SHORT);
         toast1.show();
     }
 
